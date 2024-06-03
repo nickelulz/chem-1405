@@ -1,0 +1,5 @@
+Notes/*.aux
+Notes/*.fdb_latexmk
+Notes/*.fls
+Notes/*.log
+Notes/*.out
