@@ -1,18 +1,50 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{report}
 
-\usepackage{classnotes}
+\usepackage[utf8]{inputenc}
+\usepackage[transitional]{classnotes}
+\usepackage{float}
 \usepackage{tgpagella}
 
 \title{CHEM 1405 Notes}
 \author{Mufaro Machaya}
 \date{Summer 2024}
 
+\renewcommand{\chaptername}{Module}
+
+\newcommand{\note}[1]{\textbf{Note:} #1}
+
 \begin{document}
 
 \maketitle
 
-\begin{thrm}[Example]
-	Hello, World!
-\end{thrm}
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\chapter{Quantitative Skills}
+\input{modules/module_1.tex}
+
+\chapter{Matter}
+\input{modules/module_2.tex}
+
+\chapter{Elements}
+\input{modules/module_3.tex}
+
+\chapter{Compounds}
+\input{modules/module_4.tex}
+
+\chapter{Reactions}
+\input{modules/module_5.tex}
+
+\chapter{Moles}
+\input{modules/module_6.tex}
+
+\chapter{Intermolecular Forces}
+\input{modules/module_7.tex}
+
+\chapter{Solutions}
+\input{modules/module_8.tex}
 
 \end{document}
