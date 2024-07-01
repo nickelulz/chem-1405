@@ -1,27 +1,63 @@
 \documentclass[12pt]{report}
 
 \usepackage[utf8]{inputenc}
+\usepackage{longtable}
 \usepackage[transitional]{classnotes}
-\usepackage{float}
+\usepackage{float, multicol}
 \usepackage{tgpagella}
+\usepackage{pdfpages}
+\usepackage[version=4]{mhchem}
 
 \title{CHEM 1405 Notes}
 \author{Mufaro Machaya}
 \date{Summer 2024}
 
+\graphicspath{ {./images/} }
+
 \renewcommand{\chaptername}{Module}
 
 \newcommand{\note}[1]{\textbf{Note:} #1}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\nuclear}[3]{$\ds _{#1}^{#2}\text{#3}$}
+\newcommand{\elvl}[1]{$\langle$#1$\rangle$}
+
+\newcommand{\startpreface}{
+	\renewcommand{\thechapter}{\Roman{chapter}}
+	\renewcommand{\thesection}{\thechapter.\Roman{section}}
+	\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+	\pagenumbering{Roman}
+}
+
+\newcommand{\startmainsections}{
+	\renewcommand{\thechapter}{\arabic{chapter}}
+	\renewcommand{\thesection}{\thechapter.\arabic{section}}
+	\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+	\setcounter{chapter}{0}
+	\pagenumbering{arabic}
+}
+
+\setcounter{tocdepth}{3}
 
 \begin{document}
 
 \maketitle
+
+These are my notes from CHEM 1405 with Professor Priyanka Prashant, which I took at Lone Star College-CyFair (online). I needed the course to enter Science One at The University of British Columbia, haha. Maybe someone else will find them more useful than I did. I made them with \textbf{Classnotes} by Neil Rathi. Kudos to him.
 
 \newpage
 
 \tableofcontents
 
 \newpage
+
+\includepdf[pages=-]{periodic_table.pdf}
+
+\startpreface
+
+\chapter{Reference Materials}
+\input{reference.tex}
+
+\startmainsections
 
 \chapter{Quantitative Skills}
 \input{modules/module_1.tex}
